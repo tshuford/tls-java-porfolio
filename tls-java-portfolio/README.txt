@@ -1,5 +1,4 @@
-This Eclipse project was built and run using Java 1.8.0_131. To build project, select Poject->Build Project.
-You might also need to do a clean on the project before building.
+This Eclipse project was built and run using Java 1.8.0_131. To build project, select Project->Build Project.
 
 The project contains the following runnable code:
 
