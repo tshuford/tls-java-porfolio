@@ -24,8 +24,13 @@ tls.test4.Solution.java - The code calculates the storage used by four types of 
 	StringTokenizer allowed me to not have to create String arrays for some of the lower level tokens
 	derived from the line tokens that each contained one line of data from the original multi-line input string.
 	Run tls.test4.Solution.main()
-tls.elevator - Basic elevator simulator. Currently configured for a six floor building with four elevators. Two of the elevators
-	are also freight elevators with a front passenger door and a back freight door.
+tls.elevator - Basic elevator simulator. Currently configured for a six floor building with four elevators. Two of the elevators (3 and 4)
+	are also freight elevators with a front passenger door and a back freight door. Since only starting state elevator and floor data is set 
+	in BuildingElevatorController.setupTestState(), an elevator can sit idle when it reaches a floor for pickup or drop off and it has no further
+	drop offs or new pickups of the correct type for that elevator. An example of this is Elevator 1 which services the pickup going up
+	on Floor 1. Since the passenger did not press a floor to go to and all other passenger pickups have been serviced by other elevators,
+	Elevator 1 sits idle on Floor 1 after the 1st iteration. If Elevator 1, as part of iteration 2, had the passenger pressed a floor number
+	button (like floor 3) to go to, Elevator 1 would have gone to that floor to drop off the passenger. 
 	Run tls.elevator.Building.main()
 
 
